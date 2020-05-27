@@ -1,0 +1,17 @@
+pelicula.pelicula_controller:
+    path: "/pelicula"
+    defaults:
+        _controller: '\Drupal\pelicula\Controller\PeliculaController::index'
+        _title: "Pelicula"
+    requirements:
+        _permission: "access content"
+
+pelicula.configuration_form:
+    path: "/admin/config/pelicula/configuration"
+    defaults:
+        _form: '\Drupal\pelicula\Form\ConfigurationForm'
+        _title: "Formulario de configuracion"
+    requirements:
+        _permission: "access pelicula configuration"
+    options:
+        _admin_route: true

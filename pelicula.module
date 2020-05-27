@@ -1,0 +1,32 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function pelicula_help($route_name, RouteMatchInterface $routeMatchInterface) {
+  switch ($route_name) {
+    case 'help.page.pelicula':
+      return t('
+          <h3>About</h3>
+          <p>Agregar tu pelicula favorita</p>
+      ');
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pelicula_theme() {
+  return [
+    'pelicula' => [
+      'variables'=>[
+          'title'=>'',
+          'movie'=>''
+      ],
+      'template'=>'pelicula'
+    ]
+  ];
+}

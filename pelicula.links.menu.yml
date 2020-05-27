@@ -1,0 +1,6 @@
+pelicula:
+    title: "Agregar pelicula"
+    route_name: pelicula.configuration_form
+    description: "Configuracion del módulo pelicula favorito"
+    parent: system.admin_config_system
+    weight: 99
